@@ -1,0 +1,126 @@
+﻿<Window x:Class="Checkers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkers"
+        mc:Ignorable="d"
+        Title="Checkers game"
+        Height="873.182" 
+        Width="1000" 
+          ResizeMode="NoResize"
+        Background="#181235">
+    <Grid Margin="0,0,4,-19">
+
+        <Image Margin="10,0,0,10" Source="C:\Users\David\source\repos\Checkers\Checkers\Images\checkers-game.jpg" Stretch="Fill"/>
+
+        <Button 
+                x:Name="ExitButton"
+                FontSize="40"
+                Content="Exit" 
+                Click="ExitButton_Click"
+                Foreground="AntiqueWhite"
+                FontWeight="Medium"
+                FontFamily="Fonts/#Dosis"
+                Visibility="Visible"  Margin="396,542,598,214">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="#2008a8"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger
+                                Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#4c6bf5"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="Auto"
+                                CornerRadius="40"
+                                Background="{TemplateBinding Property=Background}" Margin="0,0,-194,0">
+                        <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center">
+                        </ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+                x:Name="PlayButton"
+                FontSize="40"
+                Content="Play" 
+                Click="PlayButton_Click"
+                Foreground="AntiqueWhite"
+                FontWeight="Medium"
+                FontFamily="Fonts/#Dosis"
+                Visibility="Visible"
+                Margin="396,318,598,438">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="#2008a8"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger
+                                Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#4c6bf5"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="Auto"
+                                CornerRadius="40"
+                                Background="{TemplateBinding Property=Background}" Margin="0,0,-194,0">
+                        <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center">
+                        </ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+                x:Name="HelpButton"
+                FontSize="40"
+                Content="Help" 
+                Click="HelpButton_Click"
+                Foreground="AntiqueWhite"
+                FontWeight="Medium"
+                FontFamily="Fonts/#Dosis"
+                Visibility="Visible"  Margin="396,429,598,327">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="#2008a8"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger
+                                Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#4c6bf5"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="Auto"
+                                CornerRadius="40"
+                                Background="{TemplateBinding Property=Background}" Margin="0,0,-194,0">
+                        <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center">
+                        </ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Window>

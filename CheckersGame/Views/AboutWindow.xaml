@@ -1,0 +1,138 @@
+﻿<Window x:Class="Checkers.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkers"
+        mc:Ignorable="d"
+        Title="Checkers game"
+        Width="832.703" 
+        ResizeMode="NoResize"
+        Background="#181235" Height="760.447">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="560*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock
+            x:Name="Title1"
+            FontSize="50"
+            Foreground="AntiqueWhite"
+            HorizontalAlignment="Center"
+            FontWeight="Heavy"
+            FontFamily="Fonts/#Dosis"
+            Margin="-25,60,65,0" 
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            Text="About the game" 
+            VerticalAlignment="Top" Height="95" Width="520">
+        </TextBlock>
+
+        <TextBlock
+            x:Name="Title2"
+            FontSize="38"
+            TextAlignment="Center"
+            Foreground="AntiqueWhite"
+            HorizontalAlignment="Center"
+            FontWeight="Heavy"
+            FontFamily="Fonts/#Dosis"
+            Margin="0,512,115,0" 
+            TextWrapping="Wrap"
+            Text="About the developer" 
+            VerticalAlignment="Top" Height="86" Width="452"/>
+
+        <TextBlock
+            x:Name="Title3"
+            FontSize="35"
+            Foreground="AntiqueWhite"
+            HorizontalAlignment="Center"
+            FontWeight="Medium"
+            FontFamily="Fonts/#Dosis"
+            Margin="-150,670,167,-25" 
+            TextWrapping="Wrap"
+              TextAlignment="Center"
+            Text="Grupa : 292" 
+            VerticalAlignment="Top" Height="86" Width="550" RenderTransformOrigin="0.549,0.43"/>
+
+        <TextBlock
+            x:Name="Title4"
+            FontSize="35"
+              TextAlignment="Center"
+            Foreground="AntiqueWhite"
+            HorizontalAlignment="Center"
+              FontWeight="Medium"
+            FontFamily="Fonts/#Dosis"
+            Margin="-110,566,177,0" 
+            TextWrapping="Wrap"
+            Text="Nume : Constantinescu David" 
+            VerticalAlignment="Top" Height="86" Width="760" Grid.ColumnSpan="2"/>
+
+        <TextBlock
+            x:Name="Title5"
+            FontSize="35"
+            Foreground="AntiqueWhite"
+            HorizontalAlignment="Left"
+            FontWeight="Medium"
+            FontFamily="Fonts/#Dosis"
+              TextAlignment="Center"
+            Margin="0,616,0,0" 
+            Text="E-mail : constantinescudavid50@yahoo.com" 
+            VerticalAlignment="Top" Height="86" Width="770" Grid.ColumnSpan="2"/>
+
+
+        <TextBlock
+            x:Name="Content"
+            FontSize="22"
+            Foreground="AntiqueWhite"
+            HorizontalAlignment="Center"
+            FontWeight="Heavy"
+            FontFamily="Fonts/#Dosis"
+            Margin="10,130,47,219" 
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            Text="Jocul este de regulă alcătuit dintr-o tablă de șah cu 8 x 8 pătrate colorate alternativ deschis și întunecat.Figurile de joc sunt 24 de discuri rotunde confecționate din lemn, pentru unul culoare albă și de culoare neagră pentru celălalt jucător.  Câmpul de joc îl constituie numai pătrățelele de culoare închisă, piesele de joc deplasându-se numai diagonal înainte, câte un pătrat, caz de excepție când poate sări peste piesa adversarului pe care o câștigă.Condiția de a putea sări piesa adversarului este ca în spatele piesei sărite să existe un câmp (pătrat) gol. Țelul jocului este de a ajunge pe ultimul rând de pătrățele din partea adversarului când piesele de joc suprapuse două câte două vor fi numite 'dame'.Aceste piese duble de joc pot sări diagonal de-a lungul tablei. A câștigat jocul acea persoană care a câștigat toate piesele adversarului sau l-a blocat."
+            Width="760"
+            Grid.ColumnSpan="2">
+
+        </TextBlock>
+
+
+        <Button 
+                x:Name="AboutExitButton"
+                FontSize="40"
+                Content="Exit" 
+                Click="AboutExitButton_Click"
+                Foreground="AntiqueWhite"
+                FontWeight="Medium"
+                FontFamily="Fonts/#Dosis"
+                Visibility="Visible"
+                Margin="440,10,237,601" Grid.ColumnSpan="2">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="#2008a8"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger
+                                Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#4c6bf5"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="Auto"
+                                CornerRadius="80"
+                                Background="{TemplateBinding Property=Background}" Margin="228,0,-194,13">
+                        <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center">
+                        </ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
